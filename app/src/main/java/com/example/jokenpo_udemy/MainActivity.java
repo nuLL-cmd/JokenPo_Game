@@ -1,13 +1,14 @@
 package com.example.jokenpo_udemy;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
-import android.support.v7.app.AlertDialog;
 import android.view.animation.Animation;
 import android.widget.TextView;
 import android.widget.ImageView;
@@ -79,6 +80,7 @@ public class MainActivity extends Activity {
             }
         });
     }
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void clickJogador(View view){
         tocasom();
 
@@ -140,6 +142,7 @@ public class MainActivity extends Activity {
         Log.i("logx","Teste onResume: "+String.valueOf(estado));
 
     }
+    @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     public void gravarResult(){
         int vitoria;
         vitoria = prefJogador.getInt("vitoria",0);
