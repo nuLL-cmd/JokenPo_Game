@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#FFC107"
+        android:gravity="right|end"
+        android:paddingRight="30sp"
+        android:text="Jokem-Po"
+        android:textColor="#050507"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPedra"
+        android:layout_width="0dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#5A3A07"
+        android:onClick="clickJogador"
+        android:src="@drawable/pedra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPapel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnTesoura"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#F4511E"
+        android:onClick="clickJogador"
+        android:src="@drawable/tesoura"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPapel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPapel"
+        app:layout_constraintTop_toTopOf="@+id/btnPapel" />
+
+    <ImageButton
+        android:id="@+id/btnPapel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#3949AB"
+        android:onClick="clickJogador"
+        android:src="@drawable/papel"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPedra"
+        app:layout_constraintEnd_toStartOf="@+id/btnTesoura"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPedra"
+        app:layout_constraintTop_toTopOf="@+id/btnPedra"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgJogador1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/interrogacao"
+        app:layout_constraintBottom_toTopOf="@+id/btnPedra"
+        app:layout_constraintEnd_toStartOf="@+id/imgJogador2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <ImageView
+        android:id="@+id/imgJogador2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/interrogacao"
+        app:layout_constraintBottom_toBottomOf="@+id/imgJogador1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgJogador1"
+        app:layout_constraintTop_toTopOf="@+id/imgJogador1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgVersus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/vs"
+        app:layout_constraintBottom_toTopOf="@+id/btnPapel"
+        app:layout_constraintEnd_toEndOf="@+id/imgJogador2"
+        app:layout_constraintStart_toStartOf="@+id/imgJogador1"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <TextView
+        android:id="@+id/txtContador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="54654"
+        android:textColor="#0E0D0D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabel"
+        app:layout_constraintStart_toEndOf="@+id/txtLabel"
+        app:layout_constraintTop_toTopOf="@+id/txtLabel" />
+
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Vitorias:"
+        android:textColor="#0E0D0D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgJogador1"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+</android.support.constraint.ConstraintLayout>
